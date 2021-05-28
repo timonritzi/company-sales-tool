@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+ app:
+  image: backend:latest
+  restart: always
+  env_file:
+   - ./envs/dev.env
+  command: 'sh /scripts/dev.sh'
+
+  #these volumes pass the data from your computer to the docker container
+  volumes:
+   - frontend:/frontend/
+   - ./backend:/backend
+   - media:/media
+   - static-files:/static-files
+  ports:
+   - '8000:8000'
+  depends_on:
+   - postgres
+   - redis
+
+ postgres:
+  image: postgres:11
+  ports:
+   - '5432:5432'
+  volumes:
+   - postgres:/var/lib/postgresql/data
+  env_file:
+   - ./envs/dev.env
+
+ redis:
+  image: redis:latest
+  ports:
+   - '6380:6380'
+  restart: always
+  command: [ "redis-server", "--bind", "redis", "--port", "6380" ]
+  volumes:
+   - redis_data:/data
+
+
+#these volumes create a directory in your computer so that no matter what, they will not be deleted
+volumes:
+ media:
+ static-files:
+ postgres:
+ frontend:
+ redis_data:

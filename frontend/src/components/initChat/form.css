@@ -1,0 +1,291 @@
+.App {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.App .screensharing-btn {
+  display: none;
+}
+.App .chat-btns {
+  display: none;
+}
+.App .chat-popup {
+  display: none;
+}
+.App .login.hidden {
+  display: none;
+}
+.App .hidden {
+  display: none;
+}
+.App .login-button {
+  display: flex;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  border: 4px solid black;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: "bmwbold";
+  font-weight: normal;
+  margin-bottom: 2vh;
+  margin-right: 1.5vh;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  background-color: #fafafb;
+}
+.App .login-button.hidden {
+  display: none;
+}
+.App .login {
+  display: flex;
+  height: 52vh;
+  width: 40vh;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  background-color: white;
+}
+.App .login .form-seller {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.App .login .form-seller .seller-pb-name {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  align-items: center;
+  width: 100%;
+  padding-top: 1vh;
+  padding-left: 1vh;
+  padding-bottom: 1vh;
+  background-color: #f3f3f3;
+}
+.App .login .form-seller .seller-pb-name img {
+  height: 5vh;
+  border-radius: 50%;
+  margin-right: 1vh;
+  object-fit: cover;
+}
+.App .login .form-seller .seller-pb-name p {
+  margin-right: 15vh;
+  font-size: 1.5vh;
+  font-family: "bmwlight";
+}
+.App .login .form-seller .seller-pb-name span {
+  margin-right: 1.5vh;
+  font-size: 1.5vh;
+  font-family: "bmwlight";
+}
+.App .login .form-seller .seller-pb-name #online {
+  border-radius: 100%;
+  width: 2vh;
+  height: 2vh;
+}
+.App .login .input-button {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.App .login .input-button ::placeholder {
+  color: black;
+  font-family: "bmwlight";
+  font-size: 1.5vh;
+}
+.App .login .input-button .form {
+  display: flex;
+  flex-direction: column;
+}
+.App .login .input-button .form label {
+  font-family: "bmwlight";
+  font-size: 1.5vh;
+  letter-spacing: 0.1vh;
+}
+.App .login .input-button .form input {
+  height: 4.5vh;
+  width: 20vh;
+  border: none;
+  margin-bottom: 2vh;
+  outline: none;
+  color: black;
+  font-family: "bmwlight";
+  background-color: #f3f3f3;
+  transition: all 0.3s ease;
+  border-radius: 1vh;
+  text-align: center;
+}
+.App .login .input-button .form input:hover {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+}
+.App .login .input-button .form .button-container {
+  display: flex;
+  justify-content: center;
+}
+.App .login .input-button .form .button-container button {
+  display: flex;
+  width: 11vh;
+  height: 4vh;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 1vh;
+  color: #ffffff;
+  background-color: #6e6e6e;
+  transition: all 0.3s ease;
+  font-family: "bmwlight";
+  letter-spacing: 0.1vh;
+  outline: none;
+  font-size: 1.5vh;
+}
+.App .login .input-button .form .button-container button:hover {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.App .login .form-operator {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.App .login .form-operator button {
+  display: flex;
+  height: 6.5vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.App .login .form-operator button .green {
+  background-color: #5fec6d;
+}
+.App .login .form-operator button .livechat-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #3e3e3f;
+}
+.App .login .form-operator button .livechat-container .live-chat-cell {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vh;
+}
+.App .login .form-operator button .livechat-container .live-chat-cell span {
+  font-family: "bmwlight", sans-serif;
+  font-size: 1.2vh;
+  font-weight: 700;
+}
+.App .login .form-operator button .livechat-container .live-chat-cell p {
+  font-family: "bmwlight", sans-serif;
+  font-size: 1.2vh;
+  font-weight: 700;
+}
+
+.StandAloneChat {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.StandAloneChat .chat-btns {
+  display: flex;
+  flex-direction: row;
+}
+.StandAloneChat .chat-btns .screensharing-btn a button {
+  width: 17vh;
+  height: 5vh;
+  font-size: 2vh;
+  font-family: bmwlight;
+  outline: none;
+  transition: ease 0.3s;
+}
+.StandAloneChat .chat-btns .screensharing-btn a button:hover {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+}
+.StandAloneChat .chat-btns .about-btn-container {
+  display: flex;
+  margin-left: 1vh;
+}
+.StandAloneChat .chat-btns .about-btn-container button {
+  width: 12vh;
+  height: 5vh;
+  font-size: 2vh;
+  font-family: bmwlight;
+  outline: none;
+  transition: ease 0.3s;
+}
+.StandAloneChat .chat-btns .about-btn-container button:hover {
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+}
+.StandAloneChat .chat-btns .notification-hidden {
+  display: none;
+}
+.StandAloneChat .chat-btns .notification-show {
+  display: flex;
+  align-self: center;
+  margin-left: 1vh;
+}
+.StandAloneChat .chat-btns .notification-show img {
+  border-radius: 100%;
+  height: 3vh;
+  width: 3vh;
+}
+.StandAloneChat .login {
+  display: flex;
+  height: 90%;
+  width: 90%;
+  margin-top: 1vh;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  background-color: white;
+}
+.StandAloneChat .login .form-operator {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+}
+.StandAloneChat .login .form-operator button {
+  display: flex;
+  height: 6.5vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.StandAloneChat .login .form-operator button .green {
+  background-color: #5fec6d;
+}
+.StandAloneChat .login .form-operator button .livechat-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #3e3e3f;
+}
+.StandAloneChat .login .form-operator button .livechat-container .live-chat-cell {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vh;
+}
+.StandAloneChat .login .form-operator button .livechat-container .live-chat-cell span {
+  font-family: "bmwlight", sans-serif;
+  font-size: 1.2vh;
+  font-weight: 700;
+}
+.StandAloneChat .login .form-operator button .livechat-container .live-chat-cell p {
+  font-family: "bmwlight", sans-serif;
+  font-size: 1.2vh;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=form.css.map */

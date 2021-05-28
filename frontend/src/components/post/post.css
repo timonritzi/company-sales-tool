@@ -1,0 +1,639 @@
+* {
+  margin: 0;
+  border: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+* ::-webkit-scrollbar {
+  background-color: #fafafb;
+}
+* ::-webkit-scrollbar-thumb {
+  background-color: lightgrey;
+}
+
+.chat-popup {
+  display: none;
+}
+
+.chat-popup-cancel {
+  display: none;
+}
+
+.post_root {
+  display: flex;
+  justify-content: center;
+  background-color: #fafafb;
+  flex-direction: column;
+}
+.post_root .post_cell_container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 90vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+}
+.post_root .post_cell_container .user_info {
+  display: flex;
+  width: 80vh;
+  height: 8vh;
+  margin-left: 2vh;
+  margin-top: 1vh;
+}
+.post_root .post_cell_container .user_info .profile_picture {
+  display: flex;
+  width: 5vw;
+  max-width: 5vw;
+  min-width: 4vw;
+}
+.post_root .post_cell_container .user_info .profile_picture img {
+  object-fit: contain;
+  border-radius: 50%;
+  max-width: 4vw;
+  min-width: 4vw;
+  width: 4vw;
+  margin-top: 0.3vw;
+  margin-bottom: 0.3vh;
+}
+.post_root .post_cell_container .user_info .name_date {
+  display: flex;
+  width: 35vw;
+  height: 7vh;
+  flex-direction: column;
+}
+.post_root .post_cell_container .user_info .name_date .username {
+  font-size: 1.5vh;
+  font-family: "bmwlight";
+  margin-top: 1vh;
+  line-height: 1.5;
+  color: #3e3e3f;
+}
+.post_root .post_cell_container .user_info .name_date .post_date {
+  font-size: 1vh;
+  font-family: "bmwlight";
+  line-height: 1.5;
+  color: #3e3e3f;
+}
+.post_root .post_cell_container .post_content_container {
+  display: flex;
+  margin-top: 0.5vh;
+  margin-left: 2vh;
+}
+.post_root .post_cell_container .post_content_container .post_content {
+  display: flex;
+  flex-direction: column;
+  width: 90vh;
+  margin-top: 0.5vh;
+  line-height: 1.5;
+  color: #6f6f6f;
+}
+.post_root .post_cell_container .post_content_container .post_content .post_title {
+  margin-top: 1vh;
+  margin-bottom: 0.5vh;
+  font-size: 2.5vh;
+  font-family: "bmwbold";
+  font-weight: normal;
+  line-height: 1.5;
+  color: #3e3e3f;
+  margin-left: 2vh;
+  margin-right: 1vw;
+}
+.post_root .post_cell_container .post_content_container .post_content .post_date_published {
+  font-size: 1.5vh;
+  font-family: "bmwlight";
+  line-height: 1.5;
+  color: #6f6f6f;
+  margin-left: 2vh;
+  margin-right: 1vw;
+  align-self: center;
+}
+.post_root .post_cell_container .post_content_container .post_content .edit-delete {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.post_root .post_cell_container .post_content_container .post_content .edit-delete img {
+  height: 2vh;
+  margin: 0 1vh 0 1vh;
+}
+.post_root .post_cell_container .post_content_container .post_content hr {
+  height: 1px;
+  background-color: lightgrey;
+  width: 85vh;
+}
+.post_root .post_cell_container .post_content_container .post_content .post_text {
+  font-size: 2vh;
+  margin-top: 0.5vh;
+  font-family: "bmwlight";
+  margin-bottom: 2.5vh;
+  line-height: 1.5;
+  color: #6f6f6f;
+  margin-left: 2vh;
+  margin-right: 1vw;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-arrow,
+.post_root .post_cell_container .post_content_container .post_content .carousel.carousel-slider .control-arrow {
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  background: none;
+  border: 0;
+  font-size: 32px;
+  cursor: pointer;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-arrow:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-arrow:before,
+.post_root .post_cell_container .post_content_container .post_content .carousel.carousel-slider .control-arrow:before {
+  margin: 0 5px;
+  display: inline-block;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  content: "";
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-disabled.control-arrow {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: inherit;
+  display: none;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-prev.control-arrow {
+  left: 0;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #fff;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-next.control-arrow {
+  right: 0;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-next.control-arrow:before {
+  border-left: 8px solid #fff;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel-root {
+  outline: none;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel {
+  position: relative;
+  width: 90vh;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel img {
+  width: 90vh;
+  display: inline-block;
+  pointer-events: none;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .carousel {
+  position: relative;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-arrow {
+  outline: 0;
+  border: 0;
+  background: none;
+  top: 50%;
+  margin-top: -13px;
+  font-size: 18px;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .thumbs-wrapper {
+  margin: 20px;
+  overflow: hidden;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .thumbs {
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -ms-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  list-style: none;
+  white-space: nowrap;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .thumb {
+  -webkit-transition: border 0.15s ease-in;
+  -moz-transition: border 0.15s ease-in;
+  -ms-transition: border 0.15s ease-in;
+  -o-transition: border 0.15s ease-in;
+  transition: border 0.15s ease-in;
+  display: inline-block;
+  margin-right: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 3px solid #fff;
+  padding: 2px;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .thumb:focus {
+  border: 3px solid #ccc;
+  outline: none;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .thumb img {
+  vertical-align: top;
+  height: 10vh;
+  object-fit: contain;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel.carousel-slider {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel.carousel-slider .control-arrow {
+  top: 0;
+  color: #272727;
+  font-size: 26px;
+  bottom: 0;
+  margin-top: 0;
+  padding: 5px;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel.carousel-slider .control-arrow:hover {
+  background: lightgrey;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slider-wrapper {
+  overflow: hidden;
+  margin: auto;
+  width: 80vh;
+  -webkit-transition: height 0.15s ease-in;
+  -moz-transition: height 0.15s ease-in;
+  -ms-transition: height 0.15s ease-in;
+  -o-transition: height 0.15s ease-in;
+  transition: height 0.15s ease-in;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slider-wrapper.axis-horizontal .slider {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slider-wrapper.axis-horizontal .slider .slide {
+  flex-direction: column;
+  flex-flow: column;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slider-wrapper.axis-vertical {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slider-wrapper.axis-vertical .slider {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slider {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+  width: 80vh;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slider.animated {
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slide {
+  min-width: 80vh;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  background: #ffffff;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slide img {
+  width: 50vh;
+  vertical-align: top;
+  border: 0;
+  height: 40vh;
+  object-fit: contain;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slide iframe {
+  display: inline-block;
+  width: calc(100% - 80px);
+  margin: 0 40px 40px;
+  border: 0;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .slide .legend {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.25;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  -moz-transition: opacity 0.35s ease-in-out;
+  -ms-transition: opacity 0.35s ease-in-out;
+  -o-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-dots {
+  position: absolute;
+  bottom: 0;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width: 960px) {
+  .post_root .post_cell_container .post_content_container .post_content .carousel .control-dots {
+    bottom: 0;
+  }
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-dots .dot {
+  -webkit-transition: opacity 0.25s ease-in;
+  -moz-transition: opacity 0.25s ease-in;
+  -ms-transition: opacity 0.25s ease-in;
+  -o-transition: opacity 0.25s ease-in;
+  transition: opacity 0.25s ease-in;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  background: #fff;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 8px;
+  visibility: hidden;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-dots .dot.selected,
+.post_root .post_cell_container .post_content_container .post_content .carousel .control-dots .dot:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel .carousel-status {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 10px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+  color: #fff;
+}
+.post_root .post_cell_container .post_content_container .post_content .carousel:hover .slide .legend {
+  opacity: 1;
+}
+.post_root .post_cell_container .post_content_container .post_content .link_preview {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1vw;
+  margin-top: 0.5vh;
+  margin-bottom: 4vh;
+  margin-left: 1vw;
+  background-color: rgba(223, 223, 223, 0.5);
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+}
+.post_root .post_cell_container .post_content_container .post_content .link_preview a {
+  text-decoration: none;
+}
+.post_root .post_cell_container .post_content_container .post_content .link_preview .og_title {
+  margin-top: 1vh;
+  font-size: 2vh;
+  font-family: "bmwbold";
+  font-weight: normal;
+  line-height: 1.5;
+  color: #3e3e3f;
+}
+.post_root .post_cell_container .post_content_container .post_content .link_preview .og_description {
+  font-size: 1.8vh;
+  margin-top: 0.5vh;
+  font-family: "bmwlight";
+  margin-bottom: 1.5vh;
+  line-height: 1.5;
+  color: #6f6f6f;
+}
+.post_root .post_cell_container .post_content_container .post_content .link_preview .og_image_url {
+  display: flex;
+  margin-bottom: 2.5vh;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .carousel .thumb img {
+    vertical-align: top;
+    height: 15vw;
+    object-fit: cover;
+  }
+
+  .carousel .slide img {
+    width: 50vw;
+    vertical-align: top;
+    border: 0;
+    height: 70vw;
+    object-fit: contain;
+  }
+
+  .chat-popup {
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    width: 10vh;
+    left: 1vw;
+    bottom: 10vw;
+  }
+
+  .chat-popup-cancel {
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    width: 5vh;
+    top: 0.8vw;
+    right: 6vw;
+  }
+
+  .post_root .post_cell_container .post_content_container .post_content {
+    width: 90vw;
+    margin-left: 0vh;
+  }
+
+  .post_root .post_cell_container .post_content_container .post_content .carousel .slide {
+    flex-direction: column;
+    flex-flow: column;
+    max-width: 90vw;
+    min-width: 90vw;
+    margin-left: 0;
+  }
+
+  .post_root .App {
+    position: fixed;
+    width: 100vw;
+    justify-content: center;
+    z-index: 1;
+    height: 100%;
+  }
+  .post_root .App .chat {
+    height: 100%;
+    width: 90%;
+    align-self: center;
+  }
+  .post_root .App .chat .seller-pb-name {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 15vw;
+  }
+  .post_root .App .chat .seller-pb-name p {
+    font-size: 3vw;
+  }
+  .post_root .App .chat .seller-pb-name span {
+    font-size: 3vw;
+  }
+  .post_root .App .chat .container-messages-customer {
+    height: 80%;
+    margin-top: 5vw;
+  }
+  .post_root .App .chat .container-message-form {
+    height: 15vw;
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+  }
+  .post_root .App .chat .container-message-form form {
+    width: 100%;
+  }
+  .post_root .App .chat .container-message-form form input {
+    font-size: 5vw;
+    width: 84%;
+  }
+  .post_root .App .chat .container-message-form form label img {
+    width: 6vw;
+  }
+  .post_root .App .chat .container-message-form form button img {
+    width: 6vw;
+  }
+  .post_root .App .chat-container {
+    display: flex;
+    height: 100%;
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+    flex-direction: column;
+  }
+  .post_root .App .chat-container .container-message {
+    height: 100%;
+  }
+  .post_root .App .chat-container .login {
+    display: flex;
+    height: 100%;
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .post_root .App .chat-container .login .form-seller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .post_root .App .chat-container .login .form-seller .seller-pb-name {
+    width: 90vw;
+    height: 10vh;
+  }
+  .post_root .App .chat-container .login .form-seller .seller-pb-name img {
+    height: 10vh;
+  }
+  .post_root .App .chat-container .login .form-seller .seller-pb-name p {
+    font-size: 3.5vh;
+    margin-right: 10vh;
+  }
+  .post_root .App .chat-container .login .form-seller .seller-pb-name span {
+    font-size: 2vh;
+  }
+  .post_root .App .chat-container .login .form-seller .input-button .form label {
+    font-size: 4vw;
+  }
+  .post_root .App .chat-container .login .form-seller .input-button .form input {
+    height: 10vw;
+    width: 100%;
+    border: none;
+    margin-bottom: 2vh;
+    padding-left: 15px;
+    outline: none;
+    color: gray;
+    font-size: 3vw;
+  }
+  .post_root .App .chat-container .login .form-seller .input-button .form .button-container {
+    width: 100%;
+  }
+  .post_root .App .chat-container .login .form-seller .input-button .form .button-container button {
+    height: 8vw;
+    border: none;
+    width: 100%;
+    margin-bottom: 1vh;
+    padding-left: 15px;
+    outline: none;
+    font-size: 4vw;
+  }
+  .post_root .post_cell_container {
+    width: 90vw;
+  }
+  .post_root .post_cell_container .post_content_container {
+    width: 90vw;
+    margin-left: 0vw;
+  }
+  .post_root .post_cell_container .post_content_container .post_content {
+    width: 90vw;
+  }
+  .post_root .post_cell_container .post_content_container .post_content .post_title {
+    font-size: 3vh;
+  }
+  .post_root .post_cell_container .post_content_container .post_content .post_text {
+    font-size: 2vh;
+  }
+  .post_root .post_cell_container .post_content_container .post_content .link_preview {
+    width: 85vw;
+  }
+  .post_root .post_cell_container .post_content_container .post_content .link_preview .og_title {
+    font-size: 3vh;
+  }
+  .post_root .post_cell_container .post_content_container .post_content .link_preview .og_description {
+    font-size: 2vh;
+  }
+  .post_root .post_cell_container .post_content_container .post_content .link_preview a .og_image_url {
+    display: flex;
+    width: 85vw;
+    max-width: 85vw;
+    margin-bottom: 2.5vh;
+    border-radius: 5px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+/*# sourceMappingURL=post.css.map */

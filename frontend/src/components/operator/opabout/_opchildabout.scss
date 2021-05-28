@@ -1,0 +1,266 @@
+.op_about_root{
+    display: flex;
+    justify-content: center;
+    background-color: #fafafb;
+
+    .op_about_container{
+        display: flex;
+        flex-direction: row;
+        width: 90vh;
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+        background-color: white;
+        -webkit-box-shadow: -0px 5px 20px -0px rgba(0, 0, 0, 0.125);
+        box-shadow: -0px 5px 20px -0px rgba(0, 0, 0, 0.125);
+
+        .op_left_container_ab{
+            display: flex;
+            justify-content: center;
+            width: 12vw;
+
+            .op_left_flex_div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .op_avatar_me{
+                    margin-top: 1vh;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    height: 6vw;
+                    width: 6vw;
+                }
+            
+
+                .op_full_name_me{
+                    margin-top: 1vh;
+                    font-size: 2vh;
+                    font-family: "bmwbold";
+                    color: #3e3e3f;
+                    font-weight: normal;
+                }
+
+                .op_postition_me{
+                    font-size: 1.5vh;
+                    margin-top: 0.5vh;
+                    font-family: "bmwlight";
+                    color: #6f6f6f;
+                }
+
+                .op_location_me{
+                    font-size: 1.5vh;
+                    margin-top: 0.5vh;
+                    font-family: "bmwlight";
+                    color: #6f6f6f;
+                }
+
+                .op_email_me{
+                    font-size: 1.5vh;
+                    margin-top: 0.5vh;
+                    font-family: "bmwlight";
+                    color: #6f6f6f;
+                }
+
+                .op_phone_me{
+                    font-size: 1.5vh;
+                    margin-top: 0.5vh;
+                    font-family: "bmwlight";
+                    color: #6f6f6f;
+                    margin-bottom: 1vh;
+                }
+            }
+        }
+
+        
+
+        .op_middle_container_ab{
+            display: flex;
+            flex-direction: column;
+            width: 34vw;
+
+            img{
+                width: 2vh;
+                margin-left: 1vh;
+            }
+
+            .op_about_me{
+                margin-top: 3vh;
+                font-size: 2vh;
+                font-family: "bmwbold";
+                color: #3e3e3f;
+                font-weight: normal;
+            }
+
+            .op_about_me_text{
+                font-size: 1.5vh;
+                margin-top: 0.5vh;
+                font-family: "bmwlight";
+                color: #6f6f6f;
+                line-height: 1.5;
+                margin-bottom: 2vh;
+                
+            }
+        }
+        .about-btn-container {
+            display: flex;
+            margin-left: 1vh;
+
+            button {
+                height: 6vh;
+                width: 8vh;
+                font-family: bmwbold;
+                font-size: 2vh;
+                outline: none;
+            }
+        }
+    
+    }
+    .screensharing-btn {
+        display: flex;
+        position: absolute;
+        top: 40vh;
+        right: 2vh;
+
+        a {
+
+            button {
+                width: 17vh;
+                height: 5vh;
+                font-size: 2vh;
+                font-family: bmwlight;
+                outline: none;
+                transition: ease 0.3s;
+            }
+            button:hover {
+                -webkit-box-shadow: -0px 5px 20px -0px rgba(0, 0, 0, 0.125);
+                box-shadow: -0px 5px 20px -0px rgba(0, 0, 0, 0.125);
+
+            }
+        }
+
+    }
+    .standalone-btn {
+        display: flex;
+        position: absolute;
+        top: 40vh;
+        right: 22vh;
+
+
+
+        button {
+            width: 17vh;
+            height: 5vh;
+            font-size: 2vh;
+            font-family: bmwlight;
+            outline: none;
+            transition: ease 0.3s;
+        }
+        button:hover {
+            -webkit-box-shadow: -0px 5px 20px -0px rgba(0, 0, 0, 0.125);
+            box-shadow: -0px 5px 20px -0px rgba(0, 0, 0, 0.125);
+
+        }
+
+
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .op_about_root{
+
+
+        .op_about_container{
+            width: 90vw;
+            margin-top: 4vh;
+
+            .op_left_container_ab{
+                width: 27vw;
+
+                .op_left_flex_div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    .op_avatar_me{
+                        margin-top: 1vh;
+                        object-fit: cover;
+                        border-radius: 50%;
+                        width: 12vw;
+                        height: 12vw;
+                    }
+                
+    
+                    .op_full_name_me{
+                        margin-top: 1vh;
+                        font-size: 2vh;
+                        font-family: 'Nunito', sans-serif;
+                        color: #3e3e3f;
+                    }
+    
+                    .op_postition_me{
+                        font-size: 1.7vh;
+                        margin-top: 0.2vh;
+                        font-family: Arial, sans-serif;
+                        color: #6f6f6f;
+                    }
+    
+                    .op_location_me{
+                        font-size: 1.2vh;
+                        margin-top: 0.5vh;
+                        font-family: Arial, sans-serif;
+                        color: #6f6f6f;
+                    }
+    
+                    .op_email_me{
+                        font-size: 1.2vh;
+                        margin-top: 0.5vh;
+                        font-family: Arial, sans-serif;
+                        color: #6f6f6f;
+                    }
+    
+                    .op_phone_me{
+                        font-size: 1.2vh;
+                        margin-top: 0.5vh;
+                        font-family: Arial, sans-serif;
+                        color: #6f6f6f;
+                        margin-bottom: 1vh;
+                    }
+                }
+
+            }
+        
+            .op_middle_container_ab{
+
+                display: flex;
+                flex-direction: column;
+                width: 58vw;
+                margin-left: 2vw;
+
+                .op_about_me{
+                    margin-top: 1.5vh;
+                    font-size: 2vh;
+                    font-family: 'Nunito', sans-serif;
+                    color: #3e3e3f;
+                }
+
+                .op_about_me_text{
+                    font-size: 1.7vh;
+                    margin-top: 0.5vh;
+                    font-family: Arial, sans-serif;
+                    color: #6f6f6f;
+                    line-height: 1.5;
+                    margin-bottom: 1vh;
+                }
+
+                .op_input-text{
+                    margin-left: 1vh;
+                    color: black;
+                    background-color: white;
+                    font-size: 1.5vh;
+                    border: lightgrey 1px solid;
+                }
+            }
+        }
+    }
+}

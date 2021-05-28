@@ -1,0 +1,409 @@
+.chat {
+  display: flex;
+  height: 52vh;
+  width: 40vh;
+  background-color: white;
+  ::-webkit-scrollbar{
+        background-color: white;
+    }
+
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: -0px 5px 20px -0px rgba(28, 105, 212, 0.125);
+  flex-direction: column;
+
+  .back-btn {
+    display: block;
+    width: 3vh;
+    height: 3vh;
+    position: absolute;
+    top: 1vh;
+    left: 0.8vh;
+    background-color: white;
+
+    img {
+      height: 100%;
+      padding: 0.5vh;
+    }
+  }
+
+
+  .seller-pb-name {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-top: 1vh;
+        padding-left: 1vh;
+        padding-bottom: 1vh;
+
+        background-color: #f3f3f3;
+
+        img {
+          height: 5vh;
+          border-radius: 50%;
+          margin-right: 1vh;
+          object-fit: cover;
+
+        }
+        p {
+          margin-right: 15vh;
+          font-size: 1.5vh;
+          font-family: "bmwlight";
+        }
+        span {
+          margin-right: 1.5vh;
+          font-size: 1.5vh;
+          font-family: "bmwlight";
+        }
+        #online {
+          border-radius: 100%;
+          width: 2vh;
+          height: 2vh;
+        }
+      }
+
+  .container-messages {
+    height: 41vh;
+    width: 100%;
+    align-self: flex-start;
+    overflow-y: scroll;
+    background-color: white;
+    margin-top: 4.5vh;
+
+
+
+    .message-wrapper {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      padding-top: 1vh;
+
+      .customer {
+        display: flex;
+        align-self: flex-end;
+        max-width: 55%;
+        margin-right: 15px;
+        height: max-content;
+        flex-wrap: wrap;
+        word-break: break-all;
+        padding: 0.75vh 1vh;
+        background-color: #6bb5cd;
+        color: white;
+        border-radius: 1.2vh;
+        margin-bottom: 1vh;
+        font-family: bmwlight;
+
+        .pdf {
+          height: 7vh;
+        }
+
+        a {
+          color: white;
+        }
+      }
+
+      .operator {
+        display: flex;
+        align-self: flex-start;
+        max-width: 55%;
+        margin-left: 15px;
+        height: max-content;
+        flex-wrap: wrap;
+        word-break: break-all;
+        padding: 0.75vh 1vh;
+        background-color: #9397a0;
+        color: white;
+        border-radius: 1.2vh;
+        margin-bottom: 1vh;
+        font-family: bmwlight;
+
+        .pdf {
+          height: 7vh;
+        }
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .container-messages-customer {
+    height: 41vh;
+    width: 100%;
+    align-self: flex-start;
+    overflow-y: scroll;
+    background-color: white;
+
+
+
+    .message-wrapper {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      padding-top: 1vh;
+
+      .customer {
+        display: flex;
+        align-self: flex-end;
+        max-width: 75%;
+        margin-right: 15px;
+        height: max-content;
+        flex-wrap: wrap;
+        word-break: break-word;
+        padding: 0.75vh 1vh;
+        background-color: #6bb5cd;
+        color: white;
+        border-radius: 1.2vh;
+        margin-bottom: 1vh;
+
+        .pdf {
+          height: 7vh;
+        }
+      }
+
+      .operator {
+        display: flex;
+        align-self: flex-start;
+        max-width: 75%;
+        margin-left: 15px;
+        height: max-content;
+        flex-wrap: wrap;
+        word-break: break-word;
+        padding: 0.75vh 1vh;
+        background-color: #9397a0;
+        color: white;
+        border-radius: 1.2vh;
+        margin-bottom: 1vh;
+
+        .pdf {
+          height: 7vh;
+        }
+      }
+    }
+  }
+
+  .container-message-form {
+    height: 6vh;
+    width: 100%;
+
+
+    form {
+      height: inherit;
+      width: inherit;
+      display: flex;
+
+
+
+      .text-input {
+        width: 70%;
+        outline: none;
+        padding-left: 15px;
+        font-size: 16px;
+        background-color: #f3f3f3;
+
+        ::placeholder {
+        color: gray;
+        }
+      }
+      label {
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f3f3f3;
+
+        img {
+          height: 3vh;
+
+        }
+      }
+      #file-input {
+        display: none;
+      }
+      button {
+        width: 15%;
+        background-color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        background-color: #f3f3f3;
+
+
+
+
+        img {
+          height: 3vh;
+
+        }
+      }
+    }
+
+
+  }
+}
+
+.StandAloneChat {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .chat {
+    display: flex;
+    height: 93%;
+    width: 100%;
+    background-color: white;
+
+    ::-webkit-scrollbar {
+      background-color: white;
+    }
+
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: -0px 5px 20px -0px rgba(28, 105, 212, 0.125);
+    flex-direction: column;
+    margin-top: 2vh;
+
+    .back-btn {
+      display: block;
+      width: 3vh;
+      height: 3vh;
+      position: absolute;
+      top: 1vh;
+      left: 0.8vh;
+      background-color: white;
+
+      img {
+        height: 100%;
+        padding: 0.5vh;
+      }
+    }
+    .container-messages {
+      height: 100%;
+      width: 100%;
+      align-self: flex-start;
+      overflow-y: scroll;
+      background-color: white;
+      margin: 0;
+
+
+
+      .message-wrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 1vh;
+
+        .customer {
+          display: flex;
+          align-self: flex-end;
+          max-width: 75%;
+          margin-right: 15px;
+          height: max-content;
+          flex-wrap: wrap;
+          word-break: break-word;
+          padding: 0.75vh 1vh;
+          background-color: #6bb5cd;
+          color: white;
+          border-radius: 1.2vh;
+          margin-bottom: 1vh;
+          font-family: bmwlight;
+
+          .pdf {
+            height: 7vh;
+          }
+
+          a {
+            color: white;
+          }
+        }
+
+        .operator {
+          display: flex;
+          align-self: flex-start;
+          max-width: 75%;
+          margin-left: 15px;
+          height: max-content;
+          flex-wrap: wrap;
+          word-break: break-word;
+          padding: 0.75vh 1vh;
+          background-color: #9397a0;
+          color: white;
+          border-radius: 1.2vh;
+          margin-bottom: 1vh;
+          font-family: bmwlight;
+
+          .pdf {
+            height: 7vh;
+          }
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+    .container-message-form {
+      height: 6vh;
+      width: 100%;
+
+
+      form {
+        height: inherit;
+        width: inherit;
+        display: flex;
+
+
+
+        .text-input {
+          width: 70%;
+          outline: none;
+          padding-left: 15px;
+          font-size: 16px;
+          background-color: #f3f3f3;
+
+          ::placeholder {
+            color: gray;
+          }
+        }
+        label {
+          width: 15%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #f3f3f3;
+
+          img {
+            height: 3vh;
+
+          }
+        }
+        #file-input {
+          display: none;
+        }
+        button {
+          width: 15%;
+          background-color: white;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          outline: none;
+          background-color: #f3f3f3;
+
+
+
+
+          img {
+            height: 3vh;
+
+          }
+        }
+      }
+
+
+    }
+  }
+}

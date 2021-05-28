@@ -1,0 +1,203 @@
+.about_root {
+  display: flex;
+  justify-content: center;
+  background-color: #fafafb;
+}
+.about_root .logo {
+  display: block;
+  height: 5vh;
+  position: absolute;
+  left: 3vh;
+  top: 3vh;
+  background-color: #fafafb;
+  color: #fafafb;
+}
+.about_root .steiner {
+  height: 5vh;
+}
+.about_root .about_container {
+  display: flex;
+  flex-direction: row;
+  width: 90vh;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.125);
+}
+.about_root .about_container .profile_picture_about {
+  width: 22vh;
+  display: flex;
+  align-self: center;
+}
+.about_root .about_container .profile_picture_about .avatar_me {
+  margin: 1vh;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 20vh;
+  width: 20vh;
+}
+.about_root .about_container .left_container_ab {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  margin-left: 1vh;
+}
+.about_root .about_container .left_container_ab .left_flex_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about_root .about_container .left_container_ab .left_flex_div .full_name_me {
+  font-size: 2.5vh;
+  font-family: "bmwbold";
+  font-weight: normal;
+  color: #3e3e3f;
+}
+.about_root .about_container .left_container_ab .left_flex_div .postition_me {
+  font-size: 1.5vh;
+  margin-top: 1.5vh;
+  font-family: "bmwlight";
+  color: #6f6f6f;
+}
+.about_root .about_container .left_container_ab .left_flex_div .location_me {
+  font-size: 1.5vh;
+  margin-top: 0.5vh;
+  font-family: "bmwlight";
+  color: #6f6f6f;
+}
+.about_root .about_container .left_container_ab .left_flex_div .email_me {
+  font-size: 1.5vh;
+  margin-top: 0.5vh;
+  font-family: "bmwlight";
+  color: #6f6f6f;
+}
+.about_root .about_container .left_container_ab .left_flex_div .phone_me {
+  font-size: 1.5vh;
+  margin-top: 0.5vh;
+  font-family: "bmwlight";
+  color: #6f6f6f;
+  margin-bottom: 1vh;
+}
+.about_root .about_container .middle_container_ab {
+  display: flex;
+  flex-direction: column;
+  width: 44vh;
+  margin-left: 1.5vh;
+  margin-right: 0.5vh;
+}
+.about_root .about_container .middle_container_ab .about_me {
+  margin-top: 3vh;
+  font-size: 2vh;
+  font-family: "bmwbold";
+  font-weight: normal;
+  color: #3e3e3f;
+}
+.about_root .about_container .middle_container_ab .about_me_text {
+  font-size: 1.5vh;
+  margin-top: 0.5vh;
+  font-family: "bmwlight";
+  color: #6f6f6f;
+  line-height: 1.5;
+  margin-bottom: 2vh;
+}
+
+@media (max-width: 1024px) {
+  .about_root {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about_root .link-about-logo {
+    display: flex;
+    position: relative;
+    margin-bottom: -1vh;
+    margin-top: 3vh;
+  }
+  .about_root .logo {
+    position: relative;
+    left: unset;
+    top: unset;
+  }
+  .about_root .about_container {
+    width: 90vw;
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .about_root .about_container .profile_picture_about {
+    display: flex;
+    width: inherit;
+    justify-content: center;
+  }
+  .about_root .about_container .left_container_ab {
+    width: 100%;
+    margin-left: 0vh;
+    justify-content: center;
+  }
+  .about_root .about_container .left_container_ab .left_flex_div .avatar_me {
+    margin-top: 1vh;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 12vw;
+    height: 12vw;
+  }
+  .about_root .about_container .left_container_ab .left_flex_div .full_name_me {
+    margin-top: 1vh;
+    font-size: 2vh;
+    font-family: "bmwbold";
+    color: #3e3e3f;
+    font-weight: normal;
+  }
+  .about_root .about_container .left_container_ab .left_flex_div .postition_me {
+    font-size: 1.7vh;
+    margin-top: 0.2vh;
+    font-family: "bmwlight";
+    color: #6f6f6f;
+  }
+  .about_root .about_container .left_container_ab .left_flex_div .location_me {
+    font-size: 1.2vh;
+    margin-top: 0.5vh;
+    font-family: "bmwlight";
+    color: #6f6f6f;
+  }
+  .about_root .about_container .left_container_ab .left_flex_div .email_me {
+    font-size: 1.2vh;
+    margin-top: 0.5vh;
+    font-family: "bmwlight";
+    color: #6f6f6f;
+  }
+  .about_root .about_container .left_container_ab .left_flex_div .phone_me {
+    font-size: 1.2vh;
+    margin-top: 0.5vh;
+    font-family: "bmwlight";
+    color: #6f6f6f;
+    margin-bottom: 1vh;
+  }
+  .about_root .about_container .middle_container_ab {
+    display: flex;
+    width: 100%;
+    margin-left: 0vw;
+  }
+  .about_root .about_container .middle_container_ab .about_me {
+    align-self: center;
+    margin-top: 1.5vh;
+    font-size: 2vh;
+    font-family: "bmwbold";
+    color: #3e3e3f;
+    font-weight: normal;
+  }
+  .about_root .about_container .middle_container_ab .about_me_text {
+    justify-self: center;
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-size: 1.7vh;
+    font-family: "bmwlight";
+    color: #6f6f6f;
+    line-height: 1.5;
+    margin-bottom: 2vh;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */
